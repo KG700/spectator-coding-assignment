@@ -86,8 +86,8 @@ class Articles extends Component {
        case 'topStory':
           categoryHeading = 'Top Stories';
           break;
-        case 'general':
-          categoryHeading = 'General'
+        case 'technology':
+          categoryHeading = 'Technology'
           break;
         case 'business':
           categoryHeading = 'Business'
