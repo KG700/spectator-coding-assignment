@@ -1,7 +1,9 @@
 import React from 'react';
 
 const ArticleCard = (props) => {
-  return null
+  return (
+    <h2>{props.title}</h2>
+  )
 }
 
 export default ArticleCard;

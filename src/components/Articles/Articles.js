@@ -32,11 +32,19 @@ class Articles extends Component {
 
   render() {
 
+    const articleCards = this.state.articles.map((article, index) => {
+      // if (index < 3) {
+        return(
+            <ArticleCard
+              title={article.title}
+            />
+        )
+      // }
+    })
+
     return(
       <>
-        <ArticleCard />
-        <ArticleCard />
-        <ArticleCard />
+        {articleCards}
         <ArticleList />
       </>
     );
