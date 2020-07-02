@@ -38,6 +38,7 @@ class Articles extends Component {
             <ArticleCard
               author={article.author}
               title={article.title}
+              image={article.image}
             />
         )
       }

@@ -5,6 +5,7 @@ const ArticleCard = (props) => {
     <>
       <h3>{props.author}</h3>
       <h2>{props.title}</h2>
+      <img src={props.image} />
     </>
   )
 }
