@@ -7,26 +7,34 @@ import classes from './Articles.module.css';
 class Articles extends Component {
 
   constructor(props) {
+    console.log('constructor');
     super(props);
     this.state = {
       articles: []
     }
-    // this.getArticles();
   }
 
-
   componentDidMount() {
-    // console.log("getArticles")
-    // let category = '';
-    // if (this.props.category !== 'topStory') {
-    //   category = 'category=' + this.props.category + '&'
-    // }
+    this.getArticles();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.category !== this.props.category) {
+        this.getArticles();
+    }
+  }
+
+  getArticles = () => {
+    let category = '';
+    if (this.props.category !== 'topStory') {
+      category = 'category=' + this.props.category + '&'
+    }
     const url = 'http://newsapi.org/v2/top-headlines?' +
                 'country=gb&' +
                 'pageSize=10&' +
-                // category +
+                category +
                 'apiKey=' + process.env.REACT_APP_API_KEY;
-    // console.log(url);
+    console.log(url);
     const request = new Request(url);
     fetch(request)
     .then(response => {
@@ -43,7 +51,7 @@ class Articles extends Component {
   }
 
   render() {
-
+    console.log('render')
     const articleCards = this.state.articles.map((article, index) => {
       if (index < 3) {
         return(
