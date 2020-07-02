@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 80vw;
-  height: 500px;
+  height: 600px;
   text-align: left;
 }
 
@@ -20,5 +20,10 @@
 }
 
 .ArticleCard h3 {
+  margin-bottom: 0;
+}
+
+.ArticleCard h2 {
+  margin-top: 0;
   margin-bottom: 0;
 }
