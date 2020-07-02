@@ -81,9 +81,29 @@ class Articles extends Component {
                                 )
                               })
 
+    let categoryHeading;
+     switch(this.props.category) {
+       case 'topStory':
+          categoryHeading = 'Top Stories';
+          break;
+        case 'general':
+          categoryHeading = 'General'
+          break;
+        case 'business':
+          categoryHeading = 'Business'
+          break;
+        case 'sports':
+          categoryHeading = 'Sports'
+          break;
+        case 'entertainment':
+          categoryHeading = 'Entertainment'
+          break;
+
+   }
+
     return(
       <div className={classes.Articles}>
-        <h2>{this.props.catergory}</h2>
+        <h2>{categoryHeading}</h2>
         {articleCards}
         <hr />
         <ul>
