@@ -83,6 +83,7 @@ class Articles extends Component {
 
     return(
       <div className={classes.Articles}>
+        <h2>{this.props.catergory}</h2>
         {articleCards}
         <hr />
         <ul>

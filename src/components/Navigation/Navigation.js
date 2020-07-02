@@ -7,6 +7,7 @@ const Navigation = (props) => {
   return(
     <header className={classes.Navigation}>
       <Logo />
+      <br />
       <nav>
         <ul>
           <li onClick={props.click} value='topStory'>Top Stories /</li>
