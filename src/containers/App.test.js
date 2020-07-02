@@ -24,4 +24,8 @@ describe('App', () => {
   it('contains 1 Logos component', () => {
     expect(wrapper.find(Logo)).toHaveLength(1);
   })
+
+  it('contains 1 Navigation component', () => {
+    expect(wrapper.find(Navigation)).toHaveLength(1);
+  })
 })

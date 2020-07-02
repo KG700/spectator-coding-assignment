@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import ArticleCard from './ArticleCard/ArticleCard';
 import ArticleListItem from './ArticleListItem/ArticleListItem';
-// import classes from './Articles.module.css';
+import classes from './Articles.module.css';
 
 class Articles extends Component {
 
@@ -11,13 +11,22 @@ class Articles extends Component {
     this.state = {
       articles: []
     }
+    // this.getArticles();
   }
 
+
   componentDidMount() {
+    // console.log("getArticles")
+    // let category = '';
+    // if (this.props.category !== 'topStory') {
+    //   category = 'category=' + this.props.category + '&'
+    // }
     const url = 'http://newsapi.org/v2/top-headlines?' +
                 'country=gb&' +
                 'pageSize=10&' +
+                // category +
                 'apiKey=' + process.env.REACT_APP_API_KEY;
+    // console.log(url);
     const request = new Request(url);
     fetch(request)
     .then(response => {
@@ -65,13 +74,13 @@ class Articles extends Component {
                               })
 
     return(
-      <>
+      <div className={classes.Articles}>
         {articleCards}
         <hr />
         <ul>
           {articleListItems}
         </ul>
-      </>
+      </div>
     );
   }
 }

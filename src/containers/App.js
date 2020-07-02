@@ -1,19 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import Articles from '../components/Articles/Articles';
 import Logo from '../components/Logo/Logo';
+import Articles from '../components/Articles/Articles';
+import Navigation from '../components/Navigation/Navigation';
 import classes from './App.module.css';
 
-function App() {
-  return (
-    <div className="App">
-      <Logo />
-      <p>Find out what's happening around the UK today</p>
-      <div className={classes.Articles}>
-        <Articles />
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      category: 'topStory'
+    }
+  }
+
+  changeCategoryHandler = (event) => {
+    let category = event.target.getAttribute('value');
+    this.setState({ category: category });
+  }
+
+  render() {
+
+    return (
+      <div className={classes.App}>
+        <div>
+          <Navigation click={this.changeCategoryHandler}/>
+        </div>
+        <div className={classes.Articles}>
+          <Articles category={this.state.category} />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
