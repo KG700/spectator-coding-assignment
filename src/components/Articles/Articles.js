@@ -36,6 +36,7 @@ class Articles extends Component {
       if (index < 3) {
         return(
             <ArticleCard
+              author={article.author}
               title={article.title}
             />
         )
