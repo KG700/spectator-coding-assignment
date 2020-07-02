@@ -25,6 +25,11 @@ describe('ArticleCard', () => {
     expect(wrapper.html()).toContain('<h3>Joe Blogs</h3>')
   })
 
+  it('renders the html for the article source', () => {
+    wrapper.setProps({ source: "Daily Mail" });
+    expect(wrapper.html()).toContain('<p>source: Daily Mail</p>')
+  })
+
   it('renders the for the article image', () => {
     wrapper.setProps({ image: "html://theimage.png" });
     expect(wrapper.html()).toContain('<img src=\"html://theimage.png\"/>')

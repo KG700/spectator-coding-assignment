@@ -25,6 +25,7 @@ class Articles extends Component {
       throw new Error("Response wasn't ok");
     })
     .then(data => {
+      console.log(data);
       this.setState({ articles: data.articles });
     })
     .catch(() => console.log("Can't access " + url + "response."))
@@ -37,11 +38,13 @@ class Articles extends Component {
         return(
             <>
               <ArticleCard
+                key={index}
                 author={article.author}
-                title={article.title}
+                title={article.title.split(" - ")[0]}
+                source={article.source.name}
                 image={article.urlToImage}
               />
-              <hr />
+              <h  r />
             </>
         )
       }
