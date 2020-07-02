@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import ArticleCard from './ArticleCard/ArticleCard';
+import ArticleList from './ArticleList/ArticleList';
 
 class Articles extends Component {
 
@@ -36,11 +37,10 @@ class Articles extends Component {
         <ArticleCard />
         <ArticleCard />
         <ArticleCard />
+        <ArticleList />
       </>
-    )
-
+    );
   }
-
 }
 
 export default Articles;
