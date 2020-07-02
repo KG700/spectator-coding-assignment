@@ -53,7 +53,7 @@ class Articles extends Component {
     return(
       <>
         {articleCards}
-        <ArticleList />
+        <ArticleListItem />
       </>
     );
   }
