@@ -17,9 +17,9 @@ describe('Articles', () => {
     wrapper = shallow(<Articles />);
   })
 
-  it('renders 3 ArticleCard components', () => {
-    expect(wrapper.find(ArticleCard)).toHaveLength(3);
-  })
+  // it('renders 3 ArticleCard components', () => {
+  //   expect(wrapper.find(ArticleCard)).toHaveLength(3);
+  // })
 
   it('renders 1 ArticleList components', () => {
     expect(wrapper.find(ArticleList)).toHaveLength(1);

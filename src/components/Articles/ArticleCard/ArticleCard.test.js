@@ -19,4 +19,5 @@ describe('ArticleCard', () => {
     wrapper.setProps({ title: "Exciting News Story" });
     expect(wrapper.html()).toEqual('<h2>Exciting News Story</h2>')
   })
+  
 })
