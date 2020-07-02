@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import ArticleCard from './ArticleCard/ArticleCard';
-import ArticleList from './ArticleList/ArticleList';
+import ArticleListItem from './ArticleListItem/ArticleListItem';
 
 class Articles extends Component {
 
@@ -44,16 +44,31 @@ class Articles extends Component {
                 source={article.source.name}
                 image={article.urlToImage}
               />
-              <h  r />
+
             </>
         )
       }
     })
 
+    const articleListItems = this.state.articles
+                              .filter((article, index) => index > 2)
+                              .map((article, index) => {
+                                return(
+                                  <ArticleListItem
+                                    key={index}
+                                    author={article.author}
+                                    title={article.title.split(" - ")[0]}
+                                    source={article.source.name}
+                                  />
+                                )
+                              })
+
     return(
       <>
         {articleCards}
-        <ArticleListItem />
+        <ul>
+          {articleListItems}
+        </ul>
       </>
     );
   }

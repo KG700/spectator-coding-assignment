@@ -20,5 +20,14 @@ describe('ArticleList', () => {
     expect(wrapper.html()).toContain('<h2>Exciting News Story</h2>')
   })
 
+  it('renders the html for the article title', () => {
+    wrapper.setProps({ author: "Joanne Blogger" });
+    expect(wrapper.html()).toContain('<h3>Joanne Blogger</h3>')
+  })
+
+  it('renders the html for the article title', () => {
+    wrapper.setProps({ source: "Telegraph" });
+    expect(wrapper.html()).toContain('<p>Telegraph</p>')
+  })
 
 })
