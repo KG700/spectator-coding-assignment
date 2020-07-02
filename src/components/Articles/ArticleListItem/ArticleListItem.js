@@ -6,6 +6,7 @@ const ArticleListItem = (props) => {
       <h3>{props.author}</h3>
       <h2>{props.title}</h2>
       <p>source: {props.source}</p>
+      <hr />
     </li>
   )
 }

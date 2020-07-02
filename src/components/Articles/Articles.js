@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import ArticleCard from './ArticleCard/ArticleCard';
 import ArticleListItem from './ArticleListItem/ArticleListItem';
+// import classes from './Articles.module.css';
 
 class Articles extends Component {
 
@@ -15,6 +16,7 @@ class Articles extends Component {
   componentDidMount() {
     const url = 'http://newsapi.org/v2/top-headlines?' +
                 'country=gb&' +
+                'pageSize=10&' +
                 'apiKey=' + process.env.REACT_APP_API_KEY;
     const request = new Request(url);
     fetch(request)
@@ -44,7 +46,6 @@ class Articles extends Component {
                 source={article.source.name}
                 image={article.urlToImage}
               />
-
             </>
         )
       }
@@ -66,6 +67,7 @@ class Articles extends Component {
     return(
       <>
         {articleCards}
+        <hr />
         <ul>
           {articleListItems}
         </ul>
