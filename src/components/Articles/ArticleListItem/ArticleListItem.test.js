@@ -27,7 +27,7 @@ describe('ArticleList', () => {
 
   it('renders the html for the article title', () => {
     wrapper.setProps({ source: "Telegraph" });
-    expect(wrapper.html()).toContain('<p>Telegraph</p>')
+    expect(wrapper.html()).toContain('<p>source: Telegraph</p>')
   })
 
 })

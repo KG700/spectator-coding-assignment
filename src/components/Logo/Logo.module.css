@@ -1,0 +1,13 @@
+.Logo {
+  color: #d30d1d;
+  text-align: center;
+  font-size: 30px;
+  height: 30px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.top {
+  font-size: 15px;
+  /* margin-bottom: 0; */
+}
