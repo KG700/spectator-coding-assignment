@@ -17,6 +17,11 @@ describe('Articles', () => {
     wrapper = shallow(<Articles />);
   })
 
+  it('renders the html for the category', () => {
+    wrapper.setProps({ category: "topStory" });
+    expect(wrapper.html()).toContain('<h2>Top Stories</h2>')
+  })
+
   // it('renders 3 ArticleCard components', () => {
   //   expect(wrapper.find(ArticleCard)).toHaveLength(3);
   // })
