@@ -24,7 +24,7 @@ class Articles extends Component {
       throw new Error("Response wasn't ok");
     })
     .then(data => {
-      console.log(data);
+      this.setState({ articles: data.articles });
     })
     .catch(() => console.log("Can't access " + url + "response."))
   }
