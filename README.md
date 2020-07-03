@@ -1,13 +1,17 @@
 # The Headlines
+See the UK top headlines in one place with The Headlines. The Headlines uses the NewsAPI to display the top headlines, arranged in a stylish and digestible format, allowing you to quickly see the top news stories happening today.
 
 ![The Headlines main page](./src/assets/The_Headlines_screenshot.png)
 
-See the UK top headlines in one place with The Headlines. The Headlines uses the NewsAPI to display the top headlines, arranged in a stylish and digestible format, allowing you to quickly see the top news stories happening today.
 
 ## Quick Start
-To run locally, fork and clone this depository and install dependencies:
+To run locally, you will need an api key from [NewsAPI](https://newsapi.org/). Fork and clone this depository and install dependencies:
 ```
 npm install
+```
+Create an .env file in the root directory and add your api key to this file
+```
+REACT_APP_API_KEY=<api_key>
 ```
 Start the server:
 ```
@@ -22,7 +26,7 @@ npm test
 This application was designed using ReactJS. A TDD process was followed using the testing frameworks Jest and Enzyme.
 
 The components have been arranged in the following structure:
-<insert component diagram>
+![Component structure](./src/assets/The_Headlines_Component_structure.png)
 
 A key goal for this application was to make the design responsive for difference screen sizes. This was achieved by designing the layout based on the smallest screen size then adjusting for larger screen sizes.
 
