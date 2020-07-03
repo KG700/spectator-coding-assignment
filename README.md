@@ -1,6 +1,6 @@
 # The Headlines
 
-<Would be good to add a screenshot once completed>
+![The Headlines main page](src/assets/Screenshot 2020-07-03 at 09.27.47.png)
 
 See the UK top headlines in one place with The Headlines. The Headlines uses the NewsAPI to display the top headlines, arranged in a stylish and digestible format, allowing you to quickly see the top news stories happening today.
 
