@@ -7,7 +7,6 @@ import classes from './Articles.module.css';
 class Articles extends Component {
 
   constructor(props) {
-    console.log('constructor');
     super(props);
     this.state = {
       articles: []
@@ -34,7 +33,6 @@ class Articles extends Component {
                 'pageSize=10&' +
                 category +
                 'apiKey=' + process.env.REACT_APP_API_KEY;
-    console.log(url);
     const request = new Request(url);
     fetch(request)
     .then(response => {
@@ -44,14 +42,12 @@ class Articles extends Component {
       throw new Error("Response wasn't ok");
     })
     .then(data => {
-      console.log(data);
       this.setState({ articles: data.articles });
     })
     .catch(() => console.log("Can't access " + url + "response."))
   }
 
   render() {
-    console.log('render')
     const articleCards = this.state.articles.map((article, index) => {
       if (index < 3) {
         return(
